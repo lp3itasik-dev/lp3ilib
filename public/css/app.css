@@ -704,6 +704,9 @@ select {
 .pointer-events-none {
   pointer-events: none;
 }
+.visible {
+  visibility: visible;
+}
 .invisible {
   visibility: hidden;
 }
@@ -1119,9 +1122,6 @@ select {
 }
 .w-32 {
   width: 8rem;
-}
-.w-36 {
-  width: 9rem;
 }
 .w-4 {
   width: 1rem;
@@ -1606,6 +1606,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(56 189 248 / var(--tw-bg-opacity));
 }
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+}
 .bg-slate-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
@@ -1617,8 +1621,8 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-opacity-0 {
-  --tw-bg-opacity: 0;
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 .bg-\[url\(\'\/img\/gedung\.png\'\)\] {
   background-image: url('/img/gedung.png');
@@ -2668,10 +2672,6 @@ select {
     position: relative;
   }
 
-  .md\:-bottom-5 {
-    bottom: -1.25rem;
-  }
-
   .md\:bottom-4 {
     bottom: 1rem;
   }
@@ -2682,6 +2682,11 @@ select {
 
   .md\:order-2 {
     order: 2;
+  }
+
+  .md\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 
   .md\:mx-auto {

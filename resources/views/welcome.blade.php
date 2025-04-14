@@ -3,7 +3,7 @@
         class="mx-auto max-w-screen bg-center bg-no-repeat bg-[url('/img/gedung.png')] bg-gray-800 bg-cover bg-blend-multiply">
         <div class="py-12">
             <div class="text-center items-center flex flex-col justify-center ">
-                <p class="font-bold text-white text-xl md:text-2xl mb-5">PERPUSTAKAAN DIGITAL</p>
+                <p class="font-bold text-white text-xl md:text-2xl mb-5">PERPUSTAKAAN DIGITAL LP3I</p>
                 <p class="font-bold text-white  text-md md:text-xl mb-1">Tugas Akhir</p>
                 <p class="mb-2 text-white ">Karya Tulis Ilmiah, Panduan, serta Referensi</p>
                 <div
