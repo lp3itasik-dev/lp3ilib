@@ -1,0 +1,12 @@
+1. lakukan docker-compose up -d 
+2. docker exec -it lp3ilib bash
+3. apt update
+4. apt install nano
+5. nano /usr/local/etc/php/php-fpm.d/www.conf
+6. cari bagian listen = 127.0.0.1:9000 (tekan ctrl + w untuk mencari)  dan ubah menjadi 0.0.0.0:8081
+7. chown -R www-data:www-data /var/www/html/storage
+8. chown -R www-data:www-data /var/www/html/bootstrap/cache
+9. php artisan config:clear
+10. php artisan cache:clear
+11. keluar dari docker exec dengan menekan 'ctrl + d'
+12. restart docker dengan perintah 'docker restart lp3ilib'

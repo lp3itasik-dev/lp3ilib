@@ -1,0 +1,16 @@
+# Mengaktifkan penulisan ulang URL
+RewriteEngine On
+
+# Mengarahkan semua lalu lintas HTTP ke HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Mengarahkan semua permintaan ke direktori /public/
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L]
+
+# Mengatur batas ukuran unggahan dan post
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 50M
+    php_value post_max_size 50M
+</IfModule>

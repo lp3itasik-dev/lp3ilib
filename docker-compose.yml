@@ -1,0 +1,44 @@
+version: "3.3"
+
+services:
+  app:
+    build: .
+    container_name: lp3ilib
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    networks:
+      - lp3ilib_net
+
+  nginx:
+    image: nginx:latest
+    container_name: lp3ilib_nginx
+    restart: unless-stopped
+    ports:
+      - "8181:80" # Nginx menerima request di port 8181
+    volumes:
+      - .:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - lp3ilib_net
+    depends_on:
+      - app
+#  db:
+#    image: mysql:8
+#    container_name: laravel_db
+#    restart: unless-stopped
+#    environment:
+#      MYSQL_ROOT_PASSWORD: rootpassword
+#      MYSQL_DATABASE: laravel
+#      MYSQL_USER: laraveluser
+#      MYSQL_PASSWORD: laravelpassword
+#    volumes:
+#      - db_data:/var/lib/mysql
+    networks:
+      - lp3ilib_net
+
+#volumes:
+#  db_data:
+
+networks:
+  lp3ilib_net:
